@@ -2,11 +2,27 @@ const form = document.querySelector('form')
 const ul = document.querySelector('ul')
 const button = document.querySelector('button')
 const input = document.getElementById('item')
-let itemsArray = localStorage.getItem('items') ?
-JSON.parse(localStorage.getItem('items')) : []
+
+
+// let itemsArray = localStorage.getItem('items') ?
+// JSON.parse(localStorage.getItem('items')) : []　
+// 11~18を省略した形
+
+let itemsArray = []
+
+if (localStorage.getItem('items')) {
+  itemsArray = JSON.parse(localStorage.getItem('items'))
+
+} else {
+  itemsArray = []
+}
+
+
+
 
 localStorage.setItem('items', JSON.stringify(itemsArray))
 const data = JSON.parse(localStorage.getItem('items'))
+
 
 const liMaker = text => {
   const li = document.createElement('li')
