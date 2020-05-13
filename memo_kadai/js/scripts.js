@@ -4,18 +4,17 @@ const button = document.querySelector('button')
 const input = document.getElementById('item')
 
 
-// let itemsArray = localStorage.getItem('items') ?
-// JSON.parse(localStorage.getItem('items')) : []　
-// 11~18を省略した形
+let itemsArray = localStorage.getItem('items') ?　JSON.parse(localStorage.getItem('items')) : []　
+// 11~18を省略した形(Ternary Operator)
 
-let itemsArray = []
+// let itemsArray = []
 
-if (localStorage.getItem('items')) {
-  itemsArray = JSON.parse(localStorage.getItem('items'))
+// if (localStorage.getItem('items')) {
+//   itemsArray = JSON.parse(localStorage.getItem('items'))
 
-} else {
-  itemsArray = []
-}
+// } else {
+//   itemsArray = []
+// }
 
 
 
